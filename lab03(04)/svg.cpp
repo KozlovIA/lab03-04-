@@ -35,7 +35,7 @@ double sred_visota(vector<size_t> bins, size_t bin_count)                // изме
     return sred_visota/bin_count;
 }
 void
-show_histogram_svg(const vector<size_t>& bins, size_t bin_count) {
+show_histogram_svg(const vector<size_t>& bins, struct input data) {
     const auto IMAGE_WIDTH = 400;
     const auto IMAGE_HEIGHT = 300;
     const auto TEXT_LEFT = 20;
@@ -45,12 +45,12 @@ show_histogram_svg(const vector<size_t>& bins, size_t bin_count) {
     const auto BLOCK_WIDTH = 10;
     svg_begin(IMAGE_WIDTH, IMAGE_HEIGHT);
     double top=0;
-    for (size_t i=0; i < bin_count; i++)
+    for (size_t i=0; i < data.bin_count; i++)
     {
         const double bin_width = BLOCK_WIDTH * bins[i];
         svg_text(TEXT_LEFT, top+TEXT_BASELINE, to_string(bins[i]));
         cout << endl;
-        if (bins[i] > sred_visota(bins, bin_count))                                          // изменения к Д/З вариваент 7. добавлено if
+        if (bins[i] > sred_visota(bins, data.bin_count))                                          // изменения к Д/З вариваент 7. добавлено if
         {
             svg_rect(TEXT_WIDTH, top, bin_width, BIN_HEIGHT, "black", "red");
             cout << endl;
