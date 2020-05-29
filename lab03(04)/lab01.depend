@@ -1,0 +1,49 @@
+# depslib dependency file v1.0
+1587234103 source:c:\users\Игорь\desktop\lab03\main.cpp
+	<iostream>
+	<vector>
+	<string>
+
+1588925574 source:c:\users\Игорь\desktop\lab03\lab03\main.cpp
+	<iostream>
+	<vector>
+	<string>
+	"histogram.h"
+	"svg.h"
+
+1588927271 c:\users\Игорь\desktop\lab03\lab03\histogram.h
+	<iostream>
+	<vector>
+	<string>
+
+1588927218 source:c:\users\Игорь\desktop\lab03\lab03\histogram.cpp
+	<iostream>
+	<vector>
+	<string>
+	"histogram.h"
+
+1587722257 source:c:\users\Игорь\desktop\lab03\lab03\svg.cpp
+	<iostream>
+	<vector>
+	<string>
+	"histogram.h"
+
+1587724790 c:\users\Игорь\desktop\lab03\lab03\svg.h
+
+1590682459 source:c:\users\Игорь\desktop\lab04\lab03\svg.cpp
+	<iostream>
+	<vector>
+	<string>
+	"histogram.h"
+
+1590762079 c:\users\Игорь\desktop\lab04\lab03\histogram.h
+	<iostream>
+	<vector>
+	<string>
+
+1590761928 source:c:\users\Игорь\desktop\lab04\lab03\histogram.cpp
+	<iostream>
+	<vector>
+	<string>
+	"histogram.h"
+
