@@ -73,11 +73,16 @@ string make_info_text()
     stringstream buffer;
     DWORD info = GetVersion();
     //printf("Version10 %u Version16 %08x\n", info, info);
-    DWORD mask01 = 0b00000000000000001111111111111111;
+    DWORD mask = 0b00000000000000001111111111111111;
     DWORD mask10 = 0b11111111111111110000000000000000;
-    DWORD MajorVersion = info & mask10;
-    DWORD MinorVersion = info & mask01;
-    printf("Windows v%u.%u", MajorVersion, MinorVersion);
+    DWORD version = info & mask;
+    DWORD platform = info >> 16;
+    DWORD MinorVersion = version >> 8;
+    DWORD MajorVersion = version & 0b00000000000000000000000011111111;
+    cout << "Version " << MajorVersion << "." << MinorVersion;
+
+
+    //printf("Windows v%u.%u", MajorVersion, MinorVersion);
 
 
     return buffer.str();
