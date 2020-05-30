@@ -75,15 +75,11 @@ string make_info_text()
     DWORD mask = 0b00000000000000001111111111111111;
     DWORD mask10 = 0b11111111111111110000000000000000;
     DWORD version = info & mask;
-    //DWORD platform = info >> 16;
+    DWORD platform = info >> 16;
+    DWORD build = platform;
     DWORD MinorVersion = version >> 8;
     DWORD MajorVersion = version & 0b00000000000000000000000011111111;
-    //printf("Windows v%u.%u", MajorVersion, MinorVersion);
-
-    if((info & 0x10000000) == 0)
-    {
-        printf("info = %x", info);
-    }
+    printf("Windows v%u.%u (build %u)", MajorVersion, MinorVersion, build);
 
     return buffer.str();
 }
