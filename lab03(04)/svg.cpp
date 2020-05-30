@@ -71,8 +71,14 @@ show_histogram_svg(const vector<size_t>& bins, size_t bin_count) {
 string make_info_text()
 {
     stringstream buffer;
-    int Version = GetVersion();
-    printf("Version10 %u Version16 %08x\n", Version, Version);
+    DWORD info = GetVersion();
+    //printf("Version10 %u Version16 %08x\n", info, info);
+    DWORD mask01 = 0b00000000000000001111111111111111;
+    DWORD mask10 = 0b11111111111111110000000000000000;
+    DWORD MajorVersion = info & mask10;
+    DWORD MinorVersion = info & mask01;
+    printf("Windows v%u.%u", MajorVersion, MinorVersion);
+
 
     return buffer.str();
 }
