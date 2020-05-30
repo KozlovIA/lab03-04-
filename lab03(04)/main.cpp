@@ -9,6 +9,8 @@ using namespace std;
 
 int main()
 {
+    make_info_text();
+    return 0;
     // ¬вод данных
     size_t number_count;
     cerr << "Enter number count: ";

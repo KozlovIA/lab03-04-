@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <windows.h>
+#include <sstream>
 #include "histogram.h"
 using namespace std;
 
@@ -64,4 +66,13 @@ show_histogram_svg(const vector<size_t>& bins, size_t bin_count) {
         top+=BIN_HEIGHT;
     }
     svg_end();
+}
+
+string make_info_text()
+{
+    stringstream buffer;
+    int Version = GetVersion();
+    printf("Version10 %u Version16 %08x\n", Version, Version);
+
+    return buffer.str();
 }
