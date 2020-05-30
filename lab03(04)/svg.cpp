@@ -79,7 +79,10 @@ string make_info_text()
     DWORD build = platform;
     DWORD MinorVersion = version >> 8;
     DWORD MajorVersion = version & 0b00000000000000000000000011111111;
-    printf("Windows v%u.%u (build %u)", MajorVersion, MinorVersion, build);
+    DWORD size = 256;
+    char ComputerName[size];
+    GetComputerNameA(ComputerName, &size);
+    printf("Windows v%u.%u (build %u)\nComputer name: %s", MajorVersion, MinorVersion, build, ComputerName);
 
     return buffer.str();
 }
