@@ -47,3 +47,31 @@
 	<string>
 	"histogram.h"
 
+1590763497 source:c:\users\Игорь\desktop\normal lab04\lab03(04)\histogram.cpp
+	<iostream>
+	<vector>
+	<string>
+	"histogram.h"
+
+1590763497 c:\users\Игорь\desktop\normal lab04\lab03(04)\histogram.h
+	<iostream>
+	<vector>
+	<string>
+
+1590844688 source:c:\users\Игорь\desktop\normal lab04\lab03(04)\main.cpp
+	<iostream>
+	<vector>
+	<string>
+	"histogram.h"
+	"svg.h"
+
+1590843128 c:\users\Игорь\desktop\normal lab04\lab03(04)\svg.h
+
+1590843694 source:c:\users\Игорь\desktop\normal lab04\lab03(04)\svg.cpp
+	<iostream>
+	<vector>
+	<string>
+	<windows.h>
+	<sstream>
+	"histogram.h"
+
