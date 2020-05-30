@@ -1,8 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <windows.h>
-#include <sstream>
 #include "histogram.h"
 using namespace std;
 
@@ -37,8 +35,7 @@ double sred_visota(vector<size_t> bins, size_t bin_count)                // изме
     return sred_visota/bin_count;
 }
 void
-show_histogram_svg(const vector<size_t>& bins, size_t bin_count)
-{
+show_histogram_svg(const vector<size_t>& bins, size_t bin_count) {
     const auto IMAGE_WIDTH = 400;
     const auto IMAGE_HEIGHT = 300;
     const auto TEXT_LEFT = 20;
@@ -67,13 +64,4 @@ show_histogram_svg(const vector<size_t>& bins, size_t bin_count)
         top+=BIN_HEIGHT;
     }
     svg_end();
-}
-
-string
-make_info_text()
-{
-    stringstream buffer;
-
-
-    return buffer.str();
 }
