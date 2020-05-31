@@ -47,6 +47,7 @@ void find_minmax(const vector<double>& numbers, size_t count, double& min, doubl
 vector<double>
 input_numbers(istream& in, size_t count) {
     vector<double> result(count);
+    cerr << "Enter numbers: ";
     for (size_t i = 0; i < count; i++)
     {
         in >> result[i];

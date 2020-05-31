@@ -41,7 +41,7 @@ int main(int argc, char* argv[])
             curl_easy_cleanup(curl);
         }
         }
-
+    // ¬вод данных
     else
     {
         inp = read_input(cin, true);

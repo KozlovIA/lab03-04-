@@ -150,8 +150,86 @@
 	<string>
 	"histogram.h"
 
+1590178530 D
+
 1590178530 c:\users\Игорь\desktop\04\lab03-7c95fb29b09c657b1ec97abc665c3e63298b206a\lab04\histogram.h
 	<iostream>
 	<vector>
 	<string>
+
+1590178530 
+
+1590884373 source:c:\users\Игорь\desktop\normal lab04\lab03(04)\histogram.cpp
+	<iostream>
+	<vector>
+	<string>
+	"histogram.h"
+	<istream>
+	<curl/curl.h>
+	<sstream>
+	<string>
+
+1590884357 c:\users\Игорь\desktop\normal lab04\lab03(04)\histogram.h
+	<iostream>
+	<vector>
+	<string>
+
+1590884898 source:c:\users\Игорь\desktop\normal lab04\lab03(04)\svg.cpp
+	<iostream>
+	<vector>
+	<string>
+	<windows.h>
+	<sstream>
+	"histogram.h"
+
+1590884839 source:c:\users\Игорь\desktop\normal lab04\lab03(04)\main.cpp
+	<iostream>
+	<vector>
+	<string>
+	"histogram.h"
+	"svg.h"
+	<curl/curl.h>
+
+1590884704 c:\users\Игорь\desktop\normal lab04\lab03(04)\svg.h
+
+1590882456 04-2
+
+1587991348 c:\users\Игорь\desktop\normal lab04\lab03(04)\curl\include\curl\curl.h
+	"curlver.h"
+	"system.h"
+	<stdio.h>
+	<limits.h>
+	<osreldate.h>
+	<sys/types.h>
+	<time.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+	<sys/select.h>
+	<sys/socket.h>
+	<sys/time.h>
+	<support/SupportDefs.h>
+	"easy.h"
+	"multi.h"
+	"urlapi.h"
+	"typecheck-gcc.h"
+
+1588129392 c:\users\Игорь\desktop\normal lab04\lab03(04)\curl\include\curl\curlver.h
+
+1587548874 c:\users\Игорь\desktop\normal lab04\lab03(04)\curl\include\curl\system.h
+	<winsock2.h>
+	<windows.h>
+	<ws2tcpip.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/poll.h>
+
+1587548874 c:\users\Игорь\desktop\normal lab04\lab03(04)\curl\include\curl\easy.h
+
+1587548874 c:\users\Игорь\desktop\normal lab04\lab03(04)\curl\include\curl\multi.h
+	"curl.h"
+
+1587548874 c:\users\Игорь\desktop\normal lab04\lab03(04)\curl\include\curl\urlapi.h
+	"curl.h"
+
+1587548874 c:\users\Игорь\desktop\normal lab04\lab03(04)\curl\include\curl\typecheck-gcc.h
 
