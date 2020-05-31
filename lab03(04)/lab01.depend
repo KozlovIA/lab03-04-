@@ -47,7 +47,7 @@
 	<string>
 	"histogram.h"
 
-1590845750 source:c:\users\Игорь\desktop\normal lab04\lab03(04)\histogram.cpp
+1590882970 source:c:\users\Игорь\desktop\normal lab04\lab03(04)\histogram.cpp
 	<iostream>
 	<vector>
 	<string>
@@ -58,7 +58,7 @@
 	<vector>
 	<string>
 
-1590875660 source:c:\users\Игорь\desktop\normal lab04\lab03(04)\svg.cpp
+1590882841 source:c:\users\Игорь\desktop\normal lab04\lab03(04)\svg.cpp
 	<iostream>
 	<vector>
 	<string>
@@ -66,12 +66,12 @@
 	<sstream>
 	"histogram.h"
 
-1590847274 source:c:\users\Игорь\desktop\normal lab04\lab03(04)\main.cpp
+1590882456 source:c:\users\Игорь\desktop\normal lab04\lab03(04)\main.cpp
 	<iostream>
 	<vector>
 	<string>
 	"histogram.h"
 	"svg.h"
 
-1590876826 c:\users\Игорь\desktop\normal lab04\lab03(04)\svg.h
+1590882456 c:\users\Игорь\desktop\normal lab04\lab03(04)\svg.h
 

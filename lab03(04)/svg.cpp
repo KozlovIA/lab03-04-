@@ -36,9 +36,29 @@ double sred_visota(vector<size_t> bins, size_t bin_count)                // изме
     }
     return sred_visota/bin_count;
 }
+string make_info_text()
+{
+    stringstream buffer;
+    DWORD info = GetVersion();
+    DWORD mask = 0b00000000000000001111111111111111;
+    DWORD mask10 = 0b11111111111111110000000000000000;
+    DWORD version = info & mask;
+    DWORD platform = info >> 16;
+    DWORD build = platform;
+    DWORD MinorVersion = version >> 8;
+    DWORD MajorVersion = version & 0b00000000000000000000000011111111;
+    DWORD size = 256;
+    char ComputerName[size];
+    GetComputerNameA(ComputerName, &size);
+    //printf("Windows v%u.%u (build %u)\nComputer name: %s", MajorVersion, MinorVersion, build, ComputerName);
+    buffer << "Windows v" << MajorVersion << "." << MinorVersion << " (build " << build << ")" << " Computer name: " << ComputerName;
+
+    return buffer.str();
+}
+
 void
 show_histogram_svg(const vector<size_t>& bins, size_t bin_count) {
-    const auto IMAGE_WIDTH = 400;
+    const auto IMAGE_WIDTH = 500;
     const auto IMAGE_HEIGHT = 300;
     const auto TEXT_LEFT = 20;
     const auto TEXT_BASELINE = 20;
@@ -65,24 +85,7 @@ show_histogram_svg(const vector<size_t>& bins, size_t bin_count) {
 
         top+=BIN_HEIGHT;
     }
+    string info_text = make_info_text();
+    svg_text(TEXT_WIDTH, top+BIN_HEIGHT, info_text);                                                                  // svg_text - добавленно в lab04-2
     svg_end();
-}
-
-string make_info_text()
-{
-    stringstream buffer;
-    DWORD info = GetVersion();
-    DWORD mask = 0b00000000000000001111111111111111;
-    DWORD mask10 = 0b11111111111111110000000000000000;
-    DWORD version = info & mask;
-    DWORD platform = info >> 16;
-    DWORD build = platform;
-    DWORD MinorVersion = version >> 8;
-    DWORD MajorVersion = version & 0b00000000000000000000000011111111;
-    DWORD size = 256;
-    char ComputerName[size];
-    GetComputerNameA(ComputerName, &size);
-    printf("Windows v%u.%u (build %u)\nComputer name: %s", MajorVersion, MinorVersion, build, ComputerName);
-
-    return buffer.str();
 }
