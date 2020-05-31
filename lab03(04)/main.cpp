@@ -11,20 +11,29 @@ int main(int argc, char* argv[])
 {
     input inp;
     //curl_global_init(CURL_GLOBAL_ALL);
-
+    int checker = 0;
     if(argc > 1)
     {
-        if(*argv[1] == '-' || *argv[2] == '-')
+        for(int i=0; i<argc; i++)
         {
-            string check_parametr1 = argv[1];
-            string check_parametr2 = argv[2];
-            if(check_parametr1 != "-verbose" && check_parametr2 != "-verbose")
-         {
+            if(*argv[i] == '-')
+            {
+                string check_parametr = argv[i];
+                if(check_parametr == "-verbose")
+                {
+                    checker = 1;
 
-            cout << "Error: you must input '-verbose' for continue!" << endl;
-            exit(1);
-         }
+                }
+                else {
+                    cout << "Error: you must input '-verbose' for continue!" << endl;
+                    exit(1);
+                }
+            }
         }
+    }
+
+        if(checker==1)
+        {
             inp = download(argv[2]);
             CURL *curl = curl_easy_init();
         if(curl)
