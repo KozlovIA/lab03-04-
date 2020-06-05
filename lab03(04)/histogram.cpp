@@ -126,7 +126,7 @@ input download(const string& address){
         if(curl)
         {
             CURLcode res;
-            curl_easy_setopt(curl, CURLOPT_URL, address);
+            curl_easy_setopt(curl, CURLOPT_URL, address.c_str());
             curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_data);
             curl_easy_setopt(curl, CURLOPT_WRITEDATA, &buffer);
             res = curl_easy_perform(curl);
